@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #3b4252;
+}
+
+h1 {
+    /* text-shadow: 0px 8px 10px rgb(202, 202, 202); */
+    color: rgb(221, 221, 221);
+    padding-bottom: 5px;
+}
+
+p {
+    display: flex;
+    place-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+    color: wheat;
+}
+
+.container { 
+    display: grid;
+    background-color: #4c566a;
+    width: 40%;
+    height: 420px;
+    margin: auto;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    grid-template-areas: 
+    "satu dua tiga tambah"
+    "empat lima enam kurang"
+    "tujuh delapan sembilan kali"
+    "nol del enter bagi";
+    border-radius: 20px;
+    place-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.item {
+    font-size: 18px;
+    font-weight: 10;
+    cursor: pointer;
+    width: 95px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    background-color: #5e81ac;
+    /* background-color: #91acdf; */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tambah, .kurang, .kali, .bagi {
+    width: 70px;
+    font-weight: 900;
+    font-size: 17px;
+    background-color: #a3be8c;
+}
+
+.item:hover {
+    color: whitesmoke;
+    background-color: #4c566a;
+}
+
+.nol {
+    grid-area: nol;
+}
+
+.del {
+    grid-area: del;
+    background-color: #a3be8c;
+}
+
+.enter {
+    font-size: 18px;
+    grid-area: enter;
+    background-color: #a3be8c;
+    /* padding: 0px 55px; */
+    text-align: center;
+    border-radius: 5px;
+}
+
+.enter:hover {
+    background-color: rgb(150, 150, 74);
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+    grid-template-areas: 
+    "satu dua"
+    "tiga tambah"
+    "empat lima" 
+    "enam kurang"
+    "tujuh delapan" 
+    "sembilan kali"
+    "nol del"
+    "enter bagi";
+     } 
+}
